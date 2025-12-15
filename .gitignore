@@ -1,0 +1,14 @@
+# Dependências
+node_modules/
+
+# Variáveis de ambiente
+.env
+
+# Logs (opcional)
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+
+# Sistema operacional (opcional, mas recomendado)
+# .DS_Store
+# Thumbs.db
