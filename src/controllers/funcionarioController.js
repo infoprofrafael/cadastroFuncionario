@@ -35,7 +35,20 @@ export const atualizarFuncionario = (req, res) =>{
 
 
 
-}
+};
+
+
+
+
+export const excluirFuncionario = (req, res) =>{
+    const{id} = req.params;
+    
+
+    db.query('DELETE FROM funcionarios WHERE id=?', [id], err=>{
+        if (err) return res.status(500).json({err:'ERRO ao excluir o funcionário'});
+        res.json({mensagem: `O funcionário foi excluído do quadro de funcionários com sucesso!`});
+    });
+};
 
 
 
