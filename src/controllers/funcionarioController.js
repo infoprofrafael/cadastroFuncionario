@@ -32,22 +32,28 @@ export const atualizarFuncionario = (req, res) =>{
         res.json({mensagem: `Funcionário(a) ${nome} atualizado(a) com sucesso!`});
 
     });
-
-
-
 };
-
-
-
 
 export const excluirFuncionario = (req, res) =>{
     const{id} = req.params;
-    
+    // Inserindo uma variávél para retornanr o nome do funcionário que foi demitido
+     
+    db.query('SELECT nome FROM funcionarios WHERE id=?', [id],(err, results)=>{
+        if (err){
+            return res.status(500).json({err:"Erro ao buscar o funcionário"});
+        }
+        if (results.length===0){
+            return res.status(404).json({err:"Funcionário não encontrado!"});
+        }
 
-    db.query('DELETE FROM funcionarios WHERE id=?', [id], err=>{
-        if (err) return res.status(500).json({err:'ERRO ao excluir o funcionário'});
-        res.json({mensagem: `O funcionário foi excluído do quadro de funcionários com sucesso!`});
+        const exfuncionario = results[0].nome;
+
+        db.query('DELETE FROM funcionarios WHERE id=?', [id], err=>{
+            if (err) return res.status(500).json({err:'ERRO ao excluir o funcionário'});
+            res.json({mensagem: `O funcionário ${exfuncionario} foi excluído do quadro de funcionários com sucesso!`});
+        });
     });
+
 };
 
 
