@@ -1,32 +1,105 @@
-.space-top{
+/* 
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+ */
+
+.container-main {
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+
+.space-top {
     height: 110px;
 }
-/* 
-.container-main{
-    
-} */
 
+#titleRegister {
+    text-shadow: 1px 1px 3px black;
+    font-size: xx-large;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
 
-#button-cadastrar:hover{
-    background-color: skyblue;
-    
 }
-.editcss{
+
+#button-cadastrar:hover {
+    background-color: skyblue;
+
+}
+
+.lineTitle {
+    background-color: skyblue;
+}
+
+#tabela-funcionarios>tr:hover {
+    background-color: rgb(162, 215, 236);
+    box-shadow: 3px 1px 4px black;
+
+}
+
+.lineTableid {
+    font-weight: 600;
+    color: blue;
+    text-align: center;
+}
+
+.lineTable {
+    font-weight: 600;
+    color: blue;
+    text-align: left;
+
+}
+
+
+.buttonEditar {
+    font-weight: 600;
+    color: blue;
+    cursor: pointer;
+    background-color: rgb(161, 194, 226);
+    width: 60px;
+    padding: 5px 0 5px 0;
+    border: 2px;
+    border-radius: 15%;
+    margin: 5px 0 5px 0;
+}
+
+.buttonExcluir {
     font-weight: 600;
     color: crimson;
+    cursor: pointer;
+    background-color: rgb(228, 224, 27);
+    width: 60px;
+    padding: 5px 0 5px 0;
+    border: 2px;
+    border-radius: 15%;
+    margin: 2px 0 10px 0;
 }
-.editcss:hover{
-    padding: 3;
-    color:rgb(28, 4, 248);
+
+.buttonEditar:hover,
+.buttonExcluir:hover {
+    color: red;
+    box-shadow: 1px 1px 4px Black;
 }
 
 @media screen and (max-width:600px) {
-    .container-main{
-       padding-left: 5%;
-       padding-right: 5%;
 
-
-       background-color: aqua;
+    #titleRegister {
+        font-size: x-large;
+        text-align: center;
     }
-    
+
+    .container-main {
+        padding-left: 5%;
+        padding-right: 5%;
+
+
+        background-color: aqua;
+    }
+
 }
