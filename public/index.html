@@ -48,6 +48,7 @@
 
 
     </header>
+
     <main class="container-main">
         <div class="space-top">
             <br>
@@ -67,17 +68,100 @@
         <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
         <label for="floating_last_name" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Cargo</label>
     </div>
+
     <div class="relative z-0 w-full mb-5 group">
       <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
       <label for="floating_email" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">E-mail corporativo</label>
   </div>
+
   <div class="relative z-0 w-full mb-5 group">
-        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_salario" id="floating_salario" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
+        <input type="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_salario" id="floating_salario" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
         <label for="floating_salario" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Salário</label>
     </div>
 
   <button id="button-cadastrar" type="submit" class="box-border border rounded-md bg-blue-200 cursor-pointer shadow-lg shadow-blue-500/50 hover:bg-sky-700 focus:ring-4 focus:ring-brand-medium shadow-2xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Cadastrar</button>
 </form>
+
+<!-- Tabela para resultado! -->
+ 
+
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default max-w-xl mx-auto m-4">
+    <table class="w-full text-sm text-left rtl:text-right text-body">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
+            <tr>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    Nome Funcionário
+                </th>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    Cargo
+                </th>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    E-mail corp
+                </th>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    Salário
+                </th>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    <span class="sr-only">Edit</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-blue-200">
+                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                    Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">
+                    Silver
+                </td>
+                <td class="px-6 py-4">
+                    Laptop
+                </td>
+                <td class="px-6 py-4">
+                    $2999
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="editcss font-medium text-fg-brand hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-blue-200">
+                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                    Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4">
+                    White
+                </td>
+                <td class="px-6 py-4">
+                    Laptop PC
+                </td>
+                <td class="px-6 py-4">
+                    $1999
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="editcss font-medium text-fg-brand hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-blue-200">
+                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                    Magic Mouse 2
+                </th>
+                <td class="px-6 py-4">
+                    Black
+                </td>
+                <td class="px-6 py-4">
+                    Accessories
+                </td>
+                <td class="px-6 py-4">
+                    $99
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="editcss font-medium text-fg-brand hover:underline">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 
 
     </main>

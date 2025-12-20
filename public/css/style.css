@@ -1,11 +1,24 @@
 .space-top{
     height: 110px;
 }
+/* 
+.container-main{
+    
+} */
+
+
 #button-cadastrar:hover{
     background-color: skyblue;
     
 }
-
+.editcss{
+    font-weight: 600;
+    color: crimson;
+}
+.editcss:hover{
+    padding: 3;
+    color:rgb(28, 4, 248);
+}
 
 @media screen and (max-width:600px) {
     .container-main{
